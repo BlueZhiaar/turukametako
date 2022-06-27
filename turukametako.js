@@ -11,7 +11,6 @@ const tweetDivided = document.getElementById('tweet_area');
 
 makeTuruKameTakoZanButton.onclick = function () {
     //チェックボックスにチェックの入った動物を配列に入れる
-    //TODO 三つチェックがついた時に処理を終わらせてアラートを出す
     let checkedAnimalsArray = new Array();
     for (let i = 0; i < animalsCheckbox.length; i++) {
         if (animalsCheckbox.item(i).checked) {
