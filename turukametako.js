@@ -28,7 +28,7 @@ makeTuruKameTakoZanButton.onclick = function () {
     let sumOfLegs = returnSumOfLegs(animalsMap);
     let sumOfHeads = returnSumOfHeads(animalsMap);
     //テスト時答えを見られる
-    console.log(animalsMap);
+    //console.log(animalsMap);
     //console.log(sumOfHeads);
     //問題文を作る
     let questionSentence = makeQuestionSentence(animalsMap,sumOfHeads,sumOfLegs);
