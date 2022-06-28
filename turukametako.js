@@ -28,7 +28,7 @@ makeTuruKameTakoZanButton.onclick = function () {
     let sumOfLegs = returnSumOfLegs(animalsMap);
     let sumOfHeads = returnSumOfHeads(animalsMap);
     //テスト時答えを見られる
-    //console.log(animalsMap);
+    console.log(animalsMap);
     //console.log(sumOfHeads);
     //問題文を作る
     let questionSentence = makeQuestionSentence(animalsMap,sumOfHeads,sumOfLegs);
@@ -39,14 +39,28 @@ makeTuruKameTakoZanButton.onclick = function () {
     }
     //問題文表示エリアの作成
     questionDivided.innerText = '';
-    const header = document.createElement('h3');
-    header.innerText = '問';
-    questionDivided.appendChild(header);
+    // headerDividedの作成
+    const headerDivided = document.createElement('div');
+    headerDivided.setAttribute('class','card-header');
+    headerDivided.innerText ='問';
+   
+    //bodyDividedの作成
+    const bodyDivided = document.createElement('div');
+    bodyDivided.setAttribute('class','card-body');
 
     const paragraph = document.createElement('p');
+    paragraph.setAttribute('class','card-text');
     paragraph.innerText = questionSentence;
-    questionDivided.appendChild(paragraph);
+    //questionDivided.appendChild(paragraph);
+    bodyDivided.appendChild(paragraph);
 
+    //questionDividedにBootstrapのスタイルを適用する
+    questionDivided.setAttribute('class','card');
+    questionDivided.setAttribute('style','max-width: 700px;');
+
+    //headerDividedとbodyDividedをquestionをquestionDividedに差し込む
+    questionDivided.appendChild(headerDivided);
+    questionDivided.appendChild(bodyDivided);
     //解答入力エリアの作成
     answerDivided.innerText = '';
     const answerInput = document.createElement('input');
