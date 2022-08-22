@@ -26,11 +26,14 @@
   <div class="container pt-5">
     <h2>二つの動物を選択して「問題を作る」ボタンを押してください</h2>
     <p>※足の数は、ツルは2本、カメは4本、タコは8本とします。</p>
-    <input type="checkbox" name="animals_checkbox" value="ツル">ツル
+    <input type="checkbox" name="animals_checkbox" id="turu_check" value="ツル">
+    <label for="turu_check">ツル</label>
     <br>
-    <input type="checkbox" name="animals_checkbox" value="カメ">カメ
+    <input type="checkbox" name="animals_checkbox" id="kame_check" value="カメ">
+    <label for="kame_check">カメ</label>
     <br>
-    <input type="checkbox" name="animals_checkbox" value="タコ">タコ
+    <input type="checkbox" name="animals_checkbox" id="tako_check" value="タコ">
+    <label for="tako_check">タコ</label>
     <br>
     <button class="btn btn-dark" id="make_turu_kame_tako_zan">問題を作る</button>
     <div id="question_area"></div>
