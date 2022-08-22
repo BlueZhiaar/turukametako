@@ -10,7 +10,7 @@ const celebrationDivided = document.getElementById('celebration_area');
 const tweetDivided = document.getElementById('tweet_area');
 
 const dropDown = document.getElementById('drop_down');
-console.log(dropDown.value);
+
 
 makeTuruKameTakoZanButton.onclick = function () {
 //test
