@@ -43,7 +43,7 @@ makeTuruKameTakoZanButton.onclick = function () {
 
     //問題文からツイート文を作成する
     function makeTweetSentence(){
-        return `${questionSentence} を解いて正解しました。挑戦したくなったら → https://bluezhiaar.github.io/turukametako/index.html`;
+        return `${dropDown.value}問題:${questionSentence} を解いて正解しました。挑戦したくなったら → https://bluezhiaar.github.io/turukametako/index.html`;
     }
     //問題文表示エリアの作成
     questionDivided.innerText = '';
