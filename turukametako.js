@@ -9,7 +9,15 @@ const answerDivided = document.getElementById('answer_area');
 const celebrationDivided = document.getElementById('celebration_area');
 const tweetDivided = document.getElementById('tweet_area');
 
+const dropDown = document.getElementById('drop_down');
+console.log(dropDown.value);
+
 makeTuruKameTakoZanButton.onclick = function () {
+//test
+//level_change_list
+    //const levelChangeList = document.getElementsByName('level_change_list');
+   
+
     //チェックボックスにチェックの入った動物を配列に入れる
     let checkedAnimalsArray = new Array();
     for (let i = 0; i < animalsCheckbox.length; i++) {
@@ -116,6 +124,20 @@ makeTuruKameTakoZanButton.onclick = function () {
 
 }
 
+//初級問題用
+function returnRandomNumber1_5() {
+    return Math.floor((Math.random() * 5) + 1);
+}
+
+//中級問題用
+function returnRandomNumber1_10() {
+    return Math.floor((Math.random() * 10) + 1);
+}
+
+
+
+
+
 //裏の作業として、動物の数を1~100の間でランダムにしたい。
 /**
  * 1~100の間のランダムな数を返す
@@ -123,6 +145,7 @@ makeTuruKameTakoZanButton.onclick = function () {
  * @return {int}
  */
 //TODO 0を確認したので0が出ないようにする
+//上級問題用
 function returnRandomNumber1_100() {
     return Math.floor((Math.random() * 100) + 1);
 }
@@ -137,7 +160,13 @@ function returnAnimalsMap(arr){
     
     let map = new Map();
     for(let i = 0; i < arr.length;i++){
-        map.set(arr[i],returnRandomNumber1_100());
+        if(dropDown.value==="初級"){
+            map.set(arr[i],returnRandomNumber1_5());
+        }else if(dropDown.value === "中級"){
+            map.set(arr[i],returnRandomNumber1_10());
+        }else{
+            map.set(arr[i],returnRandomNumber1_100());
+        }
     }
 
     return map;
